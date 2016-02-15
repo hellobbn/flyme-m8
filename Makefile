@@ -14,7 +14,7 @@ BASE := base_cm-5.1
 # It depends on the device's resolution.
 # The default value is hdpi.
 #-----------------------------------------------------------------------------
-DENSITY := xxhdpi
+DENSITY := xhdpi
 
 ##############################################################################
 # The value is used to config the bootanimation.
