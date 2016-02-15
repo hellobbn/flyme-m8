@@ -7,7 +7,7 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-BASE := devices-base_cm_5.1
+BASE := base_cm-5.1
 
 ##############################################################################
 # The value is used for resource adapter with the aapt tool.
@@ -56,7 +56,7 @@ vendor_modify_images := boot
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
-                     ProxyHandler DefaultContainerService FM2 Nfc Tag
+                     ProxyHandler DefaultContainerService FM2 Nfc Tag EasyAccessService
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -65,7 +65,7 @@ vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider Backup
 # You need ro decode FMRadio.apk to the project directory(use apktool d FMRadio.apk) first,
 # and then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-#vendor_modify_apps := FMRadio
+#vendor_modify_apps := CMSettings
 
 ##############################################################################
 # The value decides which vendor jar you want to modify.
@@ -89,7 +89,7 @@ vendor_modify_jars := android.policy framework services telephony-common wifi-se
 # You can configure the board system file path which relative to the system directory in the board release.
 # You should add "lib64/libwebviewchromium.so" for 64 bit system.
 #-----------------------------------------------------------------------------
-board_saved_files := lib/libwebviewchromium.so bin/bootanimation bin/shutdownanimation media/bootanimation.zip media/shutdownanimation.zip 
+board_saved_files := lib/libwebviewchromium.so bin/bootanimation bin/shutdownanimation media/bootanimation.zip media/shutdownanimation.zip lib/libnfc.so lib/libnfc_jni.so lib/libnfc_ndef.so libnfc.msm8974.so
 
 ##############################################################################
 # The value decides which board system apk you want to remove.
@@ -141,8 +141,8 @@ override_property += \
 # The default value is Nexus-5_Unofficial.
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
-    ro.flyme.romer=ghoul \
-    ro.product.model_romer=m8_ghoul
+    ro.flyme.romer=BBN \
+    ro.product.model_romer=m8_BBN
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.

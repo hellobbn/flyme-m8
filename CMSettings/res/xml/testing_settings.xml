@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/testing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/testing_phone_info">
+        <intent android:targetPackage="org.flerovium.settings" android:action="android.intent.action.MAIN" android:targetClass="org.flerovium.settings.RadioInfo" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/testing_battery_info">
+        <intent android:targetPackage="org.flerovium.settings" android:action="android.intent.action.MAIN" android:targetClass="org.flerovium.settings.BatteryInfo" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/testing_usage_stats">
+        <intent android:targetPackage="org.flerovium.settings" android:action="android.intent.action.MAIN" android:targetClass="org.flerovium.settings.UsageStatsActivity" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/testing_wifi_info">
+        <intent android:targetPackage="org.flerovium.settings" android:action="android.intent.action.MAIN" android:targetClass="org.flerovium.settings.wifi.WifiInfo" />
+    </PreferenceScreen>
+</PreferenceScreen>
